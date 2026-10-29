@@ -1,0 +1,94 @@
+@import './antd-overrides.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --app-bg: #f1f4f8;
+  --app-surface: #ffffff;
+  --app-text: #0f172a;
+  --app-text-muted: #64748b;
+  --app-border: #e2e8f0;
+  --app-accent: #155eef;
+  --app-accent-hover: #1248c9;
+  --app-accent-soft: #e8eefc;
+  --font-sans: 'Be Vietnam Pro', 'Segoe UI', 'Roboto', sans-serif;
+}
+
+html.dark {
+  color-scheme: dark;
+  --app-bg: #0b1220;
+  --app-surface: #141c2b;
+  --app-text: #f1f5f9;
+  --app-text-muted: #94a3b8;
+  --app-border: #2a3548;
+  --app-accent: #5b8def;
+  --app-accent-hover: #93b4f8;
+  --app-accent-soft: #1a2f55;
+}
+
+html {
+  background-color: var(--app-bg);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--app-bg);
+  color: var(--app-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+@keyframes global-loading-slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+.global-loading-bar {
+  animation: global-loading-slide 1.1s ease-in-out infinite;
+}
+
+/* Shell polish */
+.admin-shell {
+  background: var(--app-bg) !important;
+}
+
+.admin-content-panel {
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  min-width: 0;
+}
+
+/* Utility: chặn tràn chữ dài / URL / email không khoảng trắng */
+.app-break-words {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+.app-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.app-min-w-0 {
+  min-width: 0;
+}

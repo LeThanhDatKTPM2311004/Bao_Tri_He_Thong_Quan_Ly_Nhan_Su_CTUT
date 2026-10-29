@@ -1,0 +1,399 @@
+/* Light theme */
+.ant-layout {
+  background: var(--app-bg) !important;
+}
+
+.ant-layout-header {
+  background: var(--app-surface) !important;
+  border-bottom: 1px solid var(--app-border);
+}
+
+.ant-layout-sider {
+  background: var(--app-surface) !important;
+}
+
+.ant-layout-sider .ant-layout-sider-children {
+  height: 100% !important;
+  background: var(--app-surface) !important;
+}
+
+/* Sidebar cố định full viewport — tránh lộ nền khác màu khi cuộn trang */
+.admin-shell.ant-layout {
+  height: 100vh !important;
+  height: 100dvh !important;
+  max-height: 100vh !important;
+  max-height: 100dvh !important;
+  overflow: hidden !important;
+}
+
+.admin-sidebar.ant-layout-sider {
+  height: 100% !important;
+  max-height: 100% !important;
+  position: sticky !important;
+  top: 0 !important;
+  align-self: stretch !important;
+  background: var(--app-surface) !important;
+}
+
+html.dark .admin-sidebar.ant-layout-sider,
+html.dark .admin-sidebar .ant-layout-sider-children,
+html.dark .admin-sidebar .ant-menu-dark {
+  background: #141c2b !important;
+}
+
+.ant-menu-light .ant-menu-item {
+  border-radius: 8px;
+  margin: 2px 8px;
+  width: calc(100% - 16px);
+}
+
+.ant-menu-light .ant-menu-item-selected {
+  font-weight: 600;
+}
+
+.ant-card {
+  border-color: var(--app-border) !important;
+  box-shadow: none !important;
+  background: var(--app-surface) !important;
+}
+
+.ant-table-thead > tr > th {
+  font-weight: 600 !important;
+}
+
+.ant-spin-text {
+  color: var(--app-text-muted) !important;
+}
+
+/* Dark theme — contrast for inputs / selects / tables */
+html.dark .ant-card {
+  box-shadow: none !important;
+  color: #f8fafc;
+}
+
+html.dark .ant-table {
+  color: #f8fafc !important;
+  background: #1e293b !important;
+}
+
+html.dark .ant-table-thead > tr > th {
+  background: #273549 !important;
+  color: #f1f5f9 !important;
+  border-bottom-color: #475569 !important;
+}
+
+html.dark .ant-table-tbody > tr > td {
+  background: #1e293b !important;
+  color: #f8fafc !important;
+  border-bottom-color: #334155 !important;
+}
+
+html.dark .ant-table-tbody > tr:hover > td {
+  background: #334155 !important;
+}
+
+html.dark .ant-table-cell-row-hover {
+  background: #334155 !important;
+}
+
+html.dark .ant-input,
+html.dark .ant-input-affix-wrapper,
+html.dark .ant-input-number,
+html.dark .ant-input-number-input,
+html.dark .ant-select-selector,
+html.dark .ant-picker,
+html.dark textarea.ant-input {
+  background: #334155 !important;
+  color: #f8fafc !important;
+  border-color: #64748b !important;
+}
+
+html.dark .ant-input::placeholder,
+html.dark .ant-input-number-input::placeholder,
+html.dark .ant-select-selection-placeholder {
+  color: #94a3b8 !important;
+}
+
+html.dark .ant-input-affix-wrapper > input.ant-input,
+html.dark .ant-input-affix-wrapper .ant-input {
+  background: transparent !important;
+  color: #f8fafc !important;
+}
+
+html.dark .ant-input-number-group-addon,
+html.dark .ant-input-group-addon {
+  background: #273549 !important;
+  color: #e2e8f0 !important;
+  border-color: #64748b !important;
+}
+
+html.dark .ant-select-arrow,
+html.dark .ant-select-clear {
+  color: #cbd5e1 !important;
+}
+
+html.dark .ant-select-dropdown {
+  background: #1e293b !important;
+}
+
+html.dark .ant-select-item {
+  color: #f1f5f9 !important;
+}
+
+html.dark .ant-select-item-option-selected {
+  background: #1e3a5f !important;
+  color: #bfdbfe !important;
+}
+
+html.dark .ant-select-item-option-active {
+  background: #334155 !important;
+}
+
+html.dark .ant-btn-default {
+  background: #334155 !important;
+  color: #f8fafc !important;
+  border-color: #64748b !important;
+}
+
+html.dark .ant-dropdown-menu {
+  background: #1e293b !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
+html.dark .ant-dropdown-menu-item {
+  color: #f1f5f9 !important;
+  height: auto !important;
+  line-height: 1.4 !important;
+  align-items: flex-start !important;
+}
+
+/* Header user name/email — tránh khoảng trống do Space/flex kéo giãn */
+.ant-layout-header .ant-space,
+.ant-layout-header .ant-space-item {
+  height: auto !important;
+  align-self: center !important;
+}
+
+html.dark .ant-pagination .ant-pagination-item a,
+html.dark .ant-pagination .ant-pagination-item-link {
+  color: #e2e8f0 !important;
+}
+
+html.dark .ant-pagination .ant-pagination-item-active {
+  background: #1e3a5f !important;
+  border-color: #60a5fa !important;
+}
+
+html.dark .ant-pagination .ant-pagination-item-active a {
+  color: #bfdbfe !important;
+}
+
+html.dark .ant-tag-default {
+  background: #334155 !important;
+  color: #f1f5f9 !important;
+  border-color: #64748b !important;
+}
+
+html.dark .ant-form-item-label > label {
+  color: #e2e8f0 !important;
+}
+
+html.dark .ant-descriptions-item-label {
+  color: #cbd5e1 !important;
+}
+
+html.dark .ant-descriptions-item-content {
+  color: #f8fafc !important;
+}
+
+/* Responsive layout */
+.ant-layout-content {
+  max-width: 100%;
+}
+
+.ant-table-wrapper {
+  max-width: 100%;
+}
+
+/* —— Overflow / text dài: bảng, tag, list, mô tả —— */
+.admin-content-panel > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.app-cell-text-wrap {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.app-cell-text {
+  max-width: 100% !important;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.app-responsive-table .ant-table {
+  width: 100%;
+}
+
+.app-responsive-table .ant-table-thead > tr > th,
+.app-responsive-table .ant-table-tbody > tr > td {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  vertical-align: middle;
+}
+
+.app-responsive-table .ant-table-cell-ellipsis {
+  max-width: 280px;
+}
+
+.app-responsive-table .app-table-actions-col {
+  white-space: nowrap !important;
+  overflow: visible !important;
+}
+
+.app-responsive-table .app-table-actions-col .ant-btn,
+.app-responsive-table .app-table-actions-col .ant-dropdown-button {
+  max-width: 100%;
+}
+
+.ant-tag {
+  max-width: 100%;
+  white-space: normal;
+  height: auto;
+  line-height: 1.45;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.ant-list-item {
+  flex-wrap: wrap !important;
+  gap: 8px;
+  align-items: flex-start !important;
+}
+
+.ant-list-item-meta {
+  min-width: 0 !important;
+  flex: 1 1 200px !important;
+}
+
+.ant-list-item-meta-title,
+.ant-list-item-meta-description {
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.ant-descriptions-item-content,
+.ant-descriptions-item-label {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.ant-form-item {
+  max-width: 100%;
+}
+
+.ant-select,
+.ant-input,
+.ant-input-affix-wrapper,
+.ant-picker,
+.ant-input-number {
+  max-width: 100%;
+}
+
+.ant-select-selection-item {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.ant-space {
+  max-width: 100%;
+}
+
+.ant-space-item {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.ant-card-head-title {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.ant-modal-body {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.ant-typography {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 767px) {
+  .ant-table-pagination {
+    flex-wrap: wrap;
+    row-gap: 8px;
+    justify-content: center !important;
+  }
+
+  .ant-modal {
+    max-width: calc(100vw - 16px) !important;
+    margin: 8px auto !important;
+  }
+
+  .ant-drawer-content-wrapper {
+    max-width: 85vw;
+  }
+
+  .app-responsive-table .ant-table-cell-ellipsis {
+    max-width: 160px;
+  }
+
+  .app-responsive-table .ant-table-thead > tr > th,
+  .app-responsive-table .ant-table-tbody > tr > td {
+    padding: 8px 10px !important;
+  }
+
+  /* Toolbar lọc/search: xếp dọc, full width */
+  .app-toolbar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .app-toolbar .ant-input-affix-wrapper,
+  .app-toolbar .ant-select,
+  .app-toolbar .ant-input,
+  .app-toolbar .ant-btn {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .ant-page-header-heading-title {
+    white-space: normal !important;
+  }
+}
+
+/* Card org: title full text above actions, no ellipsis */
+.org-card-stack-header > .ant-card-head {
+  min-height: auto;
+}
+.org-card-stack-header .ant-card-head-wrapper {
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.org-card-stack-header .ant-card-head-title {
+  overflow: visible;
+  white-space: normal;
+  text-overflow: unset;
+  padding: 12px 0;
+}
+
+/* Trình duyệt (Edge) tự thêm mắt trên ô password, trùng mắt của Ant Design. */
+.ant-input-password input::-ms-reveal,
+.ant-input-password input::-ms-clear,
+input[type='password']::-ms-reveal,
+input[type='password']::-ms-clear {
+  display: none;
+}

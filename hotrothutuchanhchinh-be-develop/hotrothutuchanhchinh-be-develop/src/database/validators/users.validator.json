@@ -1,0 +1,53 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": ["email", "password", "fullName", "role"],
+    "properties": {
+      "_id": { "bsonType": "objectId" },
+      "email": {
+        "bsonType": "string",
+        "pattern": "^[\\w.+-]+@[\\w.-]+\\.[a-zA-Z]{2,}$",
+        "description": "Email đăng nhập, unique"
+      },
+      "password": {
+        "bsonType": "string",
+        "minLength": 60,
+        "description": "Bcrypt hash (không lưu plain text)"
+      },
+      "fullName": {
+        "bsonType": "string",
+        "minLength": 2,
+        "maxLength": 120
+      },
+      "studentId": {
+        "bsonType": ["string", "null"],
+        "maxLength": 20
+      },
+      "department": { "bsonType": ["string", "null"], "maxLength": 200 },
+      "faculty": { "bsonType": ["string", "null"], "maxLength": 200 },
+      "phone": { "bsonType": ["string", "null"], "maxLength": 20 },
+      "avatar": { "bsonType": ["string", "null"] },
+      "role": {
+        "enum": [
+          "student",
+          "academic_advisor",
+          "faculty_assistant",
+          "faculty_manager",
+          "student_affairs",
+          "principal",
+          "office_staff",
+          "admin"
+        ]
+      },
+      "permissions": {
+        "bsonType": "array",
+        "items": { "bsonType": "string" }
+      },
+      "isActive": { "bsonType": "bool" },
+      "refreshToken": { "bsonType": ["string", "null"] },
+      "lastLoginAt": { "bsonType": ["date", "null"] },
+      "createdAt": { "bsonType": "date" },
+      "updatedAt": { "bsonType": "date" }
+    }
+  }
+}
